@@ -29,30 +29,7 @@
 let config = {
 
     server_port: 8080,
-    pages: [{
-        "name": "info",
-        "url": "/info"
-    },
-    {
-        "name" : "score",
-        "url" : "/score"
-    },
-    {
-        "name" : "introduce",
-        "url" : "/introduce"
-    }],
     server_domain: 'http://localhost'
-}
-
-config.getPageUrl = function (name) {
-    for (var i = 0; i < this.pages.length; i++) {
-        if (this.pages.name = name) return this.pages.name;
-    }
-    return null;
-}
-
-config.getRootPath = function(){
-    return __dirname;
 }
 
 config.getServerDomain = function(){
