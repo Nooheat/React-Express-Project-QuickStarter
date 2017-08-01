@@ -14,13 +14,13 @@
             - index.js : Router handling requests for XXX
         - **index.js** : A js file that bundles and exports multiple routers imported from the above directories
     - database : Database module directory
-        - **config.js** : Database configuration file, it does not upload to git because of .gitignore file
+        - ~~**config.js**~~ : Database configuration file, it does not upload to git because of .gitignore file
         - What you get inside depends on whether you are using MySQL or MongoDB
     - **package.json** : You need to ```npm install```before running the server, as it has node_modules registered in the .gitignore file, not in git.
     - ~~**config.js**~~ : Server configuration file, it does not upload to git because of .gitignore file
     - ~~**node_modules**~~ : The directory containing the packages that were installed via npm, it does not upload to git because of .gitignore file
 
-## config.js Example
+## config.js Example ( /config.js )
 
 > **Not recommended. It is recommended to use environment variables for setting server.**  
 > **Ideal for servers that do not require a lot of security.**  
@@ -29,26 +29,6 @@
 let config = {
 
     server_port: 8080,
-    db_url: 'mongodb://localhost:27017/EntryDSM',
-    db_schemas: [{
-            "file": './models/userModel',
-            "modelName": 'userModel'
-        },
-        {
-            "file": './models/applyDataModel',
-            "modelName": 'applyDataModel'
-        },
-        {
-            "file" : './models/schoolModel',
-            "modelName" : 'schoolModel'
-        },
-        {
-            "file" : './models/QnAContentModel',
-            "modelName" : 'QnAContentModel'
-        }
-        // file : schema path
-        // modelName : schema model name
-    ],
     pages: [{
         "name": "info",
         "url": "/info"
@@ -80,5 +60,52 @@ config.getServerDomain = function(){
 }
 
 module.exports = config;
+
+/* You can configure more informations */
+```
+
+## config.js example ( database/config.js )
+> **Not recommended. It is recommended to use environment variables for setting database.**  
+> **Ideal for servers that do not require a lot of security.**  
+
+**In case : MongoDB**  
+```
+let config = {
+    db_url: 'mongodb://localhost:27017/EntryDSM',
+    db_schemas: [{
+            "file": './models/userModel',
+            "modelName": 'userModel'
+        },
+        {
+            "file": './models/applyDataModel',
+            "modelName": 'applyDataModel'
+        },
+        {
+            "file" : './models/schoolModel',
+            "modelName" : 'schoolModel'
+        },
+        {
+            "file" : './models/QnAContentModel',
+            "modelName" : 'QnAContentModel'
+        }
+        // file : schema path
+        // modelName : schema model name
+    ]
+};
+
+module.exports = config;
+
+/* You can configure more settings */
+```
+  
+**In case : MySQL**  
+```
+let config = {
+    db_url: 'mongodb://localhost:27017/EntryDSM'
+};
+
+module.exports = config;
+
+/* You can configure more settings */
 ```
 
