@@ -64,7 +64,7 @@ module.exports = config;
 /* You can configure more informations */
 ```
 
-## config.js example ( database/config.js )
+## config.js example ( /database/config.js )
 > **Not recommended. It is recommended to use environment variables for setting database.**  
 > **Ideal for servers that do not require a lot of security.**  
 
