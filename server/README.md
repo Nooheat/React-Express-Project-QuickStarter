@@ -69,7 +69,7 @@ module.exports = config;
 > **Ideal for servers that do not require a lot of security.**  
 
 **In case : MongoDB**  
-```
+```js
 let config = {
     db_url: 'mongodb://localhost:27017/EntryDSM',
     db_schemas: [{
@@ -99,9 +99,12 @@ module.exports = config;
 ```
   
 **In case : MySQL**  
-```
+```js
 let config = {
-    db_url: 'mongodb://localhost:27017/EntryDSM'
+    "host" : "localhost",
+    "user" : "root",
+    "password" : "your password",
+    "database" : 'database name'
 };
 
 module.exports = config;
