@@ -14,6 +14,7 @@
             - index.js : Router handling requests for XXX
         - **index.js** : A js file that bundles and exports multiple routers imported from the above directories
     - database : Database module directory
+        - **config.js** : Database configuration file, it does not upload to git because of .gitignore file
         - What you get inside depends on whether you are using MySQL or MongoDB
     - **package.json** : You need to ```npm install```before running the server, as it has node_modules registered in the .gitignore file, not in git.
     - ~~**config.js**~~ : Server configuration file, it does not upload to git because of .gitignore file
