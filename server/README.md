@@ -48,22 +48,10 @@ module.exports = config;
 **In case : MongoDB**  
 ```js
 let config = {
-    db_url: 'mongodb://localhost:27017/EntryDSM',
+    db_url: 'mongodb://localhost:27017/DatabaseName',
     db_schemas: [{
-            "file": './models/userModel',
-            "modelName": 'userModel'
-        },
-        {
-            "file": './models/applyDataModel',
-            "modelName": 'applyDataModel'
-        },
-        {
-            "file" : './models/schoolModel',
-            "modelName" : 'schoolModel'
-        },
-        {
-            "file" : './models/QnAContentModel',
-            "modelName" : 'QnAContentModel'
+            "file": './models/fileName',
+            "modelName": 'modelName'
         }
         // file : schema path
         // modelName : schema model name
